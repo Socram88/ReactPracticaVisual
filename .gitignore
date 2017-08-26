@@ -240,3 +240,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/GitPractica/GitPractica/packages.config
+/GitPractica/GitPractica/Global.asax.cs
