@@ -1,18 +1,141 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        Index
+        <!-- Counts Section -->
+<section class="dashboard-counts section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-user"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Clientes nuevos</strong><span>Ûltimos 15 dìas</span>
+                        <div class="count-number">25</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-padnote"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Pedidos pendientes</strong><span></span>
+                        <div class="count-number">400</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-check"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Facturas generadas</strong><span>Ûltimos 2 meses</span>
+                        <div class="count-number">342</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-bill"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Salidas programadas</strong><span></span>
+                        <div class="count-number">123</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-list"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Cuentas por cobrar</strong><span></span>
+                        <div class="count-number">92</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="wrapper count-title d-flex">
+                    <div class="icon"><i class="icon-list-1"></i></div>
+                    <div class="name">
+                        <strong class="text-uppercase">Cuentas por pagar</strong><span></span>
+                        <div class="count-number">70</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</section>
+
+
+<!-- Header Section-->
+<section class="dashboard-header section-padding">
+    <div class="container-fluid">
+        <div class="row d-flex align-items-md-stretch">
+            <!-- To Do List-->
+            <div class="col-lg-3 col-md-6">
+                <div class="wrapper to-do">
+                    <header>
+                        <h2 class="display h4">Tareas pendientes: </h2>
+                        <p>Lista de tareas que aùn no he completado</p>
+                    </header>
+                    <ul class="check-lists list-unstyled">
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">
+                            <label for="list-1">Comprar pan</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">
+                            <label for="list-2">Bañar a los perros</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">
+                            <label for="list-3">Hacer pedidos nuevos</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">
+                            <label for="list-4">Pagar impuestos</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">
+                            <label for="list-5">Hablarle al chinito fumado</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">
+                            <label for="list-6">Documentar inventario</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-7" name="list-7" class="form-control-custom">
+                            <label for="list-7">Reparar medidores</label>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <input type="checkbox" id="list-8" name="list-8" class="form-control-custom">
+                            <label for="list-8">Ir al super mercado</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Pie Chart-->
+            <div class="col-lg-3 col-md-6">
+                <div class="wrapper project-progress">
+                    <h2 class="display h4">Tipos de ventas en el mes actual</h2>
+                    <p>Mes actual</p>
+                    <div class="pie-chart">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Line Chart -->
+            <div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
+                <div class="wrapper sales-report">
+                    <h2 class="display h4">Reporte de ventas</h2>
+                    <p> año actual, 2 productos</p>
+                    <div class="line-chart">
+                        <canvas id="lineCahrt"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
